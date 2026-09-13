@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "https://eliasabo-omar.github.io/khaled-and-azam-project/",
+  base: "./",
   resolve: {
     alias: {
       // الآن @ تشير للمجلد الرئيسي للمشروع

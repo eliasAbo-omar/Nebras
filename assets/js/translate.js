@@ -1,11 +1,10 @@
-let translations = {};
+import translationsData from "../json/translate.json";
+
+let translations = translationsData;
 let currentLang = localStorage.getItem("selectedLang") || "ar";
 
 export async function fetchTranslations() {
   try {
-    const response = await fetch("assets/json/translate.json");
-    translations = await response.json();
-
     applyLanguage(currentLang);
 
     startObserver();
