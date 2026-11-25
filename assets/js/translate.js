@@ -3,8 +3,10 @@ let currentLang = localStorage.getItem("selectedLang") || "ar";
 
 export async function fetchTranslations() {
   try {
+    console.log("جاري جلب ملف اللغات...");
     const response = await fetch("./assets/json/translate.json");
     translations = await response.json();
+    console.log("تم جلب ملف اللغات بنجاح:", translations);
     applyLanguage(currentLang);
     startObserver();
   } catch (error) {
